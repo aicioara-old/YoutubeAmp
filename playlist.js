@@ -6,28 +6,28 @@
 YoutubeAmp = {
 	playlist_: ["http://www.youtube.com/watch?v=CT_tPxlWViY"],
     
-     i:1;
+    i:1,
 
-		get: function(i) {
-			return this.playlist_[i];
-		},
+	get: function(i) {
+		return this.playlist_[i];
+	},
 
-		add: function(song) { 
-			playlist_.length++;
-			playlist_[playlist_.length]=song;
+	add: function(song) { 
+		playlist_.length++;
+		playlist_[playlist_.length]=song;
 
-		},
+	},
 
-		getNext: function() {
-            i++; 
-            if (i>=playlist_.length) i=0;
-            return playlist_[i];
+	getNext: function() {
+        i++; 
+        if (i>=playlist_.length) i=0;
+        return playlist_[i];
 
-		},
+	},
 
-		test: function() {
-			console.log("It is working");
-			}
+	test: function() {
+		console.log("It is working");
+	}
 
 	
 }
