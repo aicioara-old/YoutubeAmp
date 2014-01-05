@@ -58,7 +58,7 @@ FakeYoutube = {
 		button = document.createElement ('button')
 		button.innerText = "Change Song"
 		button.onclick = function() {
-			ChangeVideo.scrie();
+			ChangeVideo.change();
 			// Change Video implementation test
 		}
 		document.body.appendChild(button);
@@ -77,8 +77,8 @@ FakeYoutube = {
 console.log(YoutubeAmp.get(0));
 
 ChangeVideo = {
-	scrie: function() {
-		x=YoutubeAmp.getNext;
+	change: function() {
+		x=YoutubeAmp.getNext();
 		x= x.replace("watch?v=","embed/");
 		x= x + "?rel=0"
 		document.getElementById("video").src=x;
