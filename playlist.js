@@ -5,7 +5,8 @@
 
 YoutubeAmp = {
 
-	playlist_: ["http://www.youtube.com/watch?v=CT_tPxlWViY"],
+	playlist_: ["http://www.youtube.com/watch?v=CT_tPxlWViY",
+	"https://www.youtube.com/watch?v=wVLcByj3ik8"],
 
 	get: function(index) {
 		return this.playlist_[index];
@@ -40,12 +41,15 @@ FakeYoutube = {
 
 console.log(YoutubeAmp.get(0));
 
+ChangeVideo= {
+	function scrie() {
+		x=YoutubeAmp.getNext;
+		x= x.replace("watch?v=","embed/");
+		x= x + "?rel=0"
+		document.getElementById("video").src=x;
+	}
 
-function scrie() {
-	x=YoutubeAmp.get(0);
-	document.write(x);
 }
-scrie();
 
 
 
