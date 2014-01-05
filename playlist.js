@@ -4,9 +4,11 @@
 */
 
 YoutubeAmp = {
+
 	playlist_: ["http://www.youtube.com/watch?v=CT_tPxlWViY"],
     
     i : 0,
+
 
 	get: function(i) {
 		return this.playlist_[i];
@@ -73,12 +75,15 @@ FakeYoutube = {
 
 console.log(YoutubeAmp.get(0));
 
+ChangeVideo= {
+	function scrie() {
+		x=YoutubeAmp.getNext;
+		x= x.replace("watch?v=","embed/");
+		x= x + "?rel=0"
+		document.getElementById("video").src=x;
+	}
 
-function scrie() {
-	x=YoutubeAmp.get(0);
-	document.write(x);
 }
-scrie();
 
 
 FakeYoutube.addNewLine();
