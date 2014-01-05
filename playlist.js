@@ -25,7 +25,8 @@ YoutubeAmp = {
 console.log(YoutubeAmp.get(0));
 
 function scrie(){
-x=YoutubeAmp.get(0);
-document.write(x);
+	x=YoutubeAmp.get(0);
+	document.write(x);
 }
+
 scrie();
