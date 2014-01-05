@@ -27,7 +27,7 @@ YoutubeAmp = {
 
 FakeYoutube = {
 
-	_state = 0;
+	_state : 0,
 
 	addButtonAdd: function() {
 		button = document.createElement ('button')
@@ -41,15 +41,21 @@ FakeYoutube = {
 			_state ++;
 		}
 		document.body.appendChild(button);
-	}
+	},
 
-	changeButtonChange: function() {
+	addButtonChange: function() {
 		button = document.createElement ('button')
 		button.innerText = "Change Song"
 		button.onclick = function() {
 			// Change Video implementation test
 		}
 		document.body.appendChild(button);
+
+	},
+
+	addNewLine: function() {
+		br = document.createElement('br');
+		document.body.appendChild(br);
 
 	}
 
@@ -66,9 +72,11 @@ function scrie() {
 scrie();
 
 
-
+FakeYoutube.addNewLine();
 FakeYoutube.addButtonAdd();
+FakeYoutube.addNewLine();
 FakeYoutube.addButtonChange();
+FakeYoutube.addNewLine();
 
 
 
