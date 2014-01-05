@@ -26,7 +26,7 @@ YoutubeAmp = {
 	},
 
 	test: function() {
-		console.log("It is working");
+		chrome.extension.getBackgroundPage().console.log('foo');
 	}
 
 	
@@ -41,8 +41,10 @@ FakeYoutube = {
 		button.innerText = "Add Song"
 		button.onclick = function() {
 			if (this._state==0) {
+				YoutubeAmp.test();
 				YoutubeAmp.add("http://www.youtube.com/watch?v=zWbsnAHXyBU");
 			} else {
+				YoutubeAmp.test();
 				YoutubeAmp.add("http://www.youtube.com/watch?v=gYZA7pn6WM4");
 			}
 			_state ++;
