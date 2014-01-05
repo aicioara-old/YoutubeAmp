@@ -7,4 +7,20 @@ function foo() {
 }
 
 
-foo();
+YoutubeAmp = {
+
+	playlist_: ["http://www.youtube.com/watch?v=CT_tPxlWViY"],
+
+	get: function(index) {
+		return this.playlist_[index];
+	},
+
+	put: function(index) {
+
+	}
+	
+}
+
+
+
+console.log(YoutubeAmp.get(0));

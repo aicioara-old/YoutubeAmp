@@ -3,7 +3,8 @@
   "description": "Creates a player for Youtube songs",
   "version": "1.0",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "background": {
     "scripts": ["background.js"],
