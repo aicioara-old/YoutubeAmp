@@ -6,7 +6,7 @@
 YoutubeAmp = {
 	playlist_: ["http://www.youtube.com/watch?v=CT_tPxlWViY"],
     
-    i:1,
+    i : 0,
 
 	get: function(i) {
 		return this.playlist_[i];
