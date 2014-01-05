@@ -26,13 +26,31 @@ YoutubeAmp = {
 }
 
 FakeYoutube = {
-	addButton: function() {
+
+	_state = 0;
+
+	addButtonAdd: function() {
 		button = document.createElement ('button')
-		button.innerText = "Fake Add"
+		button.innerText = "Add Song"
 		button.onclick = function() {
-			YoutubeAmp.test();
+			if (this._state==0) {
+				YoutubeAmp.add("http://www.youtube.com/watch?v=zWbsnAHXyBU");
+			} else {
+				YoutubeAmp.add("http://www.youtube.com/watch?v=gYZA7pn6WM4");
+			}
+			_state ++;
 		}
 		document.body.appendChild(button);
+	}
+
+	changeButtonChange: function() {
+		button = document.createElement ('button')
+		button.innerText = "Change Song"
+		button.onclick = function() {
+			// Change Video implementation test
+		}
+		document.body.appendChild(button);
+
 	}
 
 }
@@ -49,6 +67,8 @@ scrie();
 
 
 
-FakeYoutube.addButton();
+FakeYoutube.addButtonAdd();
+FakeYoutube.addButtonChange();
+
 
 
