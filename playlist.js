@@ -3,6 +3,13 @@
  *
 */
 
+
+function log(text) {
+	x = document.createElement('div');
+	x.innerText = text;
+	document.body.appendChild(x);
+}
+
 YoutubeAmp = {
 
 	playlist_: ["http://www.youtube.com/watch?v=CT_tPxlWViY"],
@@ -15,15 +22,15 @@ YoutubeAmp = {
 	},
 
 	add: function(song) { 
-		playlist_.length++;
-		playlist_[playlist_.length]=song;
+		this.playlist_.length++;
+		this.playlist_[this.playlist_.length]=song;
 
 	},
 
 	getNext: function() {
-        i++; 
-        if (i>=playlist_.length) i=0;
-        return playlist_[i];
+        this.i++; 
+        if (this.i>=this.playlist_.length) this.i=0;
+        return this.playlist_[this.i];
 
 	},
 
@@ -36,20 +43,11 @@ YoutubeAmp = {
 
 FakeYoutube = {
 
-	_state : 0,
-
 	addButtonAdd: function() {
 		button = document.createElement ('button')
 		button.innerText = "Add Song"
 		button.onclick = function() {
-			if (this._state==0) {
-				YoutubeAmp.test();
-				YoutubeAmp.add("http://www.youtube.com/watch?v=zWbsnAHXyBU");
-			} else {
-				YoutubeAmp.test();
-				YoutubeAmp.add("http://www.youtube.com/watch?v=gYZA7pn6WM4");
-			}
-			_state ++;
+			YoutubeAmp.add("http://www.youtube.com/watch?v=zWbsnAHXyBU");
 		}
 		document.body.appendChild(button);
 	},
@@ -59,7 +57,6 @@ FakeYoutube = {
 		button.innerText = "Change Song"
 		button.onclick = function() {
 			ChangeVideo.scrie();
-			// Change Video implementation test
 		}
 		document.body.appendChild(button);
 
@@ -74,11 +71,14 @@ FakeYoutube = {
 }
 
 
+
+
 console.log(YoutubeAmp.get(0));
+
 
 ChangeVideo = {
 	scrie: function() {
-		x=YoutubeAmp.getNext;
+		x=YoutubeAmp.getNext();
 		x= x.replace("watch?v=","embed/");
 		x= x + "?rel=0"
 		document.getElementById("video").src=x;
