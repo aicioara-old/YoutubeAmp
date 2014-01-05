@@ -1,11 +1,7 @@
-// x = document.body.style.backgroundColor="blue"
-
-
-function foo() {
-	x = document.getElementById('rightCol')
-	x.parentNode.removeChild(x)
-}
-
+/*
+ * The main object that will handle the playlist
+ *
+*/
 
 YoutubeAmp = {
 
@@ -15,12 +11,15 @@ YoutubeAmp = {
 		return this.playlist_[index];
 	},
 
-	put: function(index) {
+	add: function(song) {
+
+	}
+
+	getNext: function() {
 
 	}
 	
 }
-
 
 
 console.log(YoutubeAmp.get(0));
