@@ -13,7 +13,7 @@ YoutubeAmp = {
 
 	add: function(song) {
 
-	}
+	},
 
 	getNext: function() {
 
